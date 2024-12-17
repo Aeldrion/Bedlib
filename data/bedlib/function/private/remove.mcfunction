@@ -11,8 +11,7 @@
 #   direction, opposite
 #       The facing direction of the bed (e.g. "east") and the opposite direction (e.g. "west")
 # @context A bed's head
-# @within bedlib:set_occupied
-# @within bedlib:set_color
+# @within bedlib:remove
 # @private
 
 # Flip both tiles
