@@ -1,4 +1,4 @@
-#> bedlib:private/set_occupied_macro
+#> bedlib:private/modify_bed
 #
 # Auxiliary function for modifying beds
 # Note:
