@@ -14,9 +14,13 @@
 # @within bedlib:remove
 # @private
 
+execute unless block ~ ~ ~ #minecraft:beds run return fail
+
 # Flip both tiles
 $setblock ~ ~ ~ minecraft:$(color)_bed[part=head, facing=$(opposite)]
 $setblock ~$(dx) ~ ~$(dz) minecraft:$(color)_bed[part=foot, facing=$(opposite)]
 
 # Bed tiles can now be disposed of safely
 $fill ~ ~ ~ ~$(dx) ~ ~$(dz) minecraft:air
+
+return 1

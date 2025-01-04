@@ -26,4 +26,4 @@ execute if block ~ ~ ~ #minecraft:beds[facing=north] run data merge storage bedl
 execute if block ~ ~ ~ #minecraft:beds[facing=south] run data merge storage bedlib:args {direction: "south", opposite: "north", dx: 0, dz: -1}
 
 # Modify the bed
-function bedlib:private/modify_bed with storage bedlib:args
+return run function bedlib:private/modify_bed with storage bedlib:args

@@ -21,6 +21,8 @@
 # @within bedlib:set_color
 # @private
 
+execute unless block ~ ~ ~ #minecraft:beds run return fail
+
 # Flip both tiles
 $setblock ~ ~ ~ minecraft:$(old_color)_bed[occupied=$(state), part=head, facing=$(opposite)]
 $setblock ~$(dx) ~ ~$(dz) minecraft:$(old_color)_bed[occupied=$(state), part=foot, facing=$(opposite)]
@@ -31,3 +33,5 @@ $fill ~ ~ ~ ~$(dx) ~ ~$(dz) minecraft:air
 # Place the new bed
 $setblock ~ ~ ~ minecraft:$(new_color)_bed[occupied=$(state), part=head, facing=$(direction)]
 $setblock ~$(dx) ~ ~$(dz) minecraft:$(new_color)_bed[occupied=$(state), part=foot, facing=$(direction)]
+
+return 1

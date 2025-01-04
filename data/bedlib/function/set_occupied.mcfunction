@@ -23,4 +23,4 @@ execute if block ~ ~ ~ #minecraft:beds[facing=south] run data merge storage bedl
 
 # Modify the bed
 $data modify storage bedlib:args state set value "$(occupied)"
-function bedlib:private/modify_bed with storage bedlib:args
+return run function bedlib:private/modify_bed with storage bedlib:args
